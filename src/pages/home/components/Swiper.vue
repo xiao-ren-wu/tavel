@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl"/>
       </swiper-slide>
 
@@ -16,20 +16,21 @@
 
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         // 轮播图支持循环轮播
         loop: true
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'static/images/swipper/1.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'static/images/swipper/2.jpg'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper: function () {
+      return this.list.length
     }
   }
 }

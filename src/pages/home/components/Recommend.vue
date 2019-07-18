@@ -20,19 +20,12 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    recommendList: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'static/images/recommend/1.jpg',
-        title: '北京欢乐谷',
-        desc: '亚洲唯一飞行试过山车等你来挑战'
-      }, {
-        id: '0002',
-        imgUrl: 'static/images/recommend/2.jpg',
-        title: '古水北镇',
-        desc: '古水北镇，带你梦回江南'
-      }]
+
     }
   }
 }

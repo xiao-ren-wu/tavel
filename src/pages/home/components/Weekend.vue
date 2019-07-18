@@ -23,19 +23,12 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    weekendList: Array
+  },
   data () {
     return {
-      weekendList: [{
-        id: '0001',
-        imgUrl: 'static/images/weekend/1.jpg',
-        title: '京城周末撒欢',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }, {
-        id: '0002',
-        imgUrl: 'static/images/weekend/2.jpg',
-        title: '京城溜娃必去',
-        desc: '德智体美劳全面发展的亲子日，这些地方该去看看'
-      }]
+
     }
   }
 }

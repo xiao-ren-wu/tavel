@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-      <swiper :options="seriperOption">
+      <swiper :options="swiperOption">
         <swiper-slide v-for="(page, index) of pages" :key="index">
         <div
           class="icon"
@@ -21,45 +21,17 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '0001',
-        imgUrl: 'static/images/icons/1.png',
-        desc: '景点门票'
-      }, {
-        id: '0002',
-        imgUrl: 'static/images/icons/2.png',
-        desc: '故宫'
-      }, {
-        id: '0003',
-        imgUrl: 'static/images/icons/3.png',
-        desc: '北京必游'
-      }, {
-        id: '0004',
-        imgUrl: 'static/images/icons/4.png',
-        desc: '水上乐园'
-      }, {
-        id: '0005',
-        imgUrl: 'static/images/icons/5.png',
-        desc: '爬长城'
-      }, {
-        id: '0006',
-        imgUrl: 'static/images/icons/6.png',
-        desc: '北京欢乐谷'
-      }, {
-        id: '0007',
-        imgUrl: 'static/images/icons/7.png',
-        desc: '动植物园'
-      }, {
-        id: '0008',
-        imgUrl: 'static/images/icons/8.png',
-        desc: '北京野生动物园'
-      }, {
-        id: '0009',
-        imgUrl: 'static/images/icons/9.png',
-        desc: '北京世博园'
-      }]
+      return: {
+        swiperOption: {
+          // 禁止轮播图自动滚动
+          autoplay: false
+        }
+      }
     }
   },
   computed: {
