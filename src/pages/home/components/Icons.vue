@@ -26,11 +26,9 @@ export default {
   },
   data () {
     return {
-      return: {
-        swiperOption: {
-          // 禁止轮播图自动滚动
-          autoplay: false
-        }
+      swiperOption: {
+        // 禁止轮播图自动滚动
+        autoplay: false
       }
     }
   },
